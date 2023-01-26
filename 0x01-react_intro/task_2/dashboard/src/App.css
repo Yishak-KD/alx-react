@@ -24,11 +24,19 @@
   font-size: calc(10px + 2vmin);
   color:rgb(230, 62, 62);
 }
-
+/* div {
+  position: fixed;
+  left: 50%;
+  bottom: 20px;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+} */
 .App-header h1 {
   display: inline;
   /* justify-content: center; */
   font-weight: 500;
+  position: relative;
+  bottom: 85px;
 }
 
 .App-link {
@@ -37,6 +45,12 @@
 
 .App-body {
   height: 50vh;
+  padding: 40px;
+  font-weight: 500;
+}
+
+form {
+  padding: 0px;
 }
 
 /* =========Class footer======== */

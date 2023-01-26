@@ -13,10 +13,10 @@ function App() {
       <body className="App-body">
         <p>Login to access the full dashboard</p>
         <form>
-          <label> Email:
+          <label>Email:
             <input type="email" />
           </label>
-          <label> Password:
+          <label>Password:
             <input type="password" />
           </label>
           <button>OK</button>
@@ -25,7 +25,7 @@ function App() {
       <hr />
       <footer className="App-footer">
         <p>
-          Copyright {getFullYear()} - {getFooterCopy(true)}{" "}
+          Copyright {getFullYear()} - {getFooterCopy(true)}
         </p>
       </footer>
     </div>

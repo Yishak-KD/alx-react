@@ -1,11 +1,10 @@
 import React from 'react';
 import "./App.css";
-import Notifications from '../Notifications/Notifications'
-import Login from '../Login/Login'
-import Footer from '../Footer/Footer'
-import Header from '../Header/Header'
+import Notifications from '../Notifications/Notifications';
+import Login from '../Login/Login';
+import Footer from '../Footer/Footer';
+import Header from '../Header/Header';
 import NotificationItem from '../Notifications/NotificationItem';
-// import CourseListRow from '../CourseList/CourseListRow';
 import CourseList from '../CourseList/CourseList';
 import propTypes from 'prop-types';
 
@@ -38,13 +37,6 @@ class App extends React.Component {
     }
   }
 }
-// function App({ isLoggedIn }) {
-//   
-//     return (
-
-//     )
-//   }
-// }
 
 App.propTypes = {
   isLoggedIn: propTypes.bool

@@ -16,18 +16,18 @@ class App extends React.Component {
   }
 
   handleKeyPress(e) {
-    if (e.key === 'h' && e.ctrlKey) {
-      alert('Logging you out!')
+    if (e.ctrlKey && e.key === 'h') {
+      alert('Logging you out');
       this.logOut();
     }
   }
 
   componentDidMount() {
-    document.addEventListener('keydown', this.handleKeyPress)
+    window.addEventListener('keydown', this.handleKeyPress)
   }
 
   componentWillUnmount() {
-    document.removeEventListener('keydown', this.handleKeyPress)
+    window.removeEventListener('keydown', this.handleKeyPress)
   }
 
   render() {

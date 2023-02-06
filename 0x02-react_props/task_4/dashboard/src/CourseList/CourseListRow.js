@@ -6,34 +6,28 @@ function CourseListRow({ isHeader, textFirstCell, textSecondCell }) {
     if (textSecondCell === null) {
       return (
         <>
-          <table>
-            <tr>
-              <th colSpan={2}>textFirstCell</th>
-            </tr>
-          </table>
+          <tr>
+            <th colSpan={2}>{textFirstCell}</th>
+          </tr>
         </>
       )
     } else {
       return (
         <>
-          <table>
-            <tr>
-              <th>textFirstCell</th>
-              <th>textSecondCell</th>
-            </tr>
-          </table>
+          <tr>
+            <th>{textFirstCell}</th>
+            <th>{textSecondCell}</th>
+          </tr>
         </>
       )
     }
   } else {
     return (
       <>
-        <table>
-          <tr>
-            <td>textFirstCell</td>
-            <td>textSecondCell</td>
-          </tr>
-        </table>
+        <tr>
+          <td>{textFirstCell}</td>
+          <td>{textSecondCell}</td>
+        </tr>
       </>
     )
   }

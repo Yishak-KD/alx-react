@@ -9,6 +9,10 @@ import CourseList from '../CourseList/CourseList';
 import propTypes from 'prop-types';
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     if (this.props.isLoggedIn === true) {
       return (
@@ -39,11 +43,13 @@ class App extends React.Component {
 }
 
 App.propTypes = {
-  isLoggedIn: propTypes.bool
+  isLoggedIn: propTypes.bool,
+  logOut: propTypes.func
 }
 
 App.defaultProps = {
-  isLoggedIn: false
+  isLoggedIn: false,
+  logOut: () => null
 }
 
 export default App;

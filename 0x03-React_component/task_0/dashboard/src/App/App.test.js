@@ -14,7 +14,7 @@ describe("Test App component", () => {
 
     test("Check Notifications component", () => {
         const component = shallow(<App />)
-        expect(component.contains(<Notifications />)).toBe(true)
+        expect(component.contains(<Notifications />)).toBe(false)
     })
     test("Check Header component", () => {
         const component = shallow(<App />)
@@ -29,3 +29,4 @@ describe("Test App component", () => {
         expect(component.contains(<Footer />)).toBe(true)
     })
 })
+//

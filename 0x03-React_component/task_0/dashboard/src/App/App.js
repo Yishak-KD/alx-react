@@ -23,7 +23,7 @@ class App extends React.Component {
         <div className="App">
           <Header />
           <NotificationItem />
-          {isLoggedIn ? <CourseList listCourses={listCourses} /> : <Login />}
+          {this.props.isLoggedIn ? <CourseList listCourses={this.listCourses} /> : <Login />}
           <Footer />
         </div>
       </>

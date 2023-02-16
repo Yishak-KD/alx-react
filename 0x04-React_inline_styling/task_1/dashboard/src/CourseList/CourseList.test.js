@@ -7,4 +7,6 @@ describe("Test for CourseList component", () => {
 
         expect(wrapper.exists()).toBe(true)
     })
+
+
 })

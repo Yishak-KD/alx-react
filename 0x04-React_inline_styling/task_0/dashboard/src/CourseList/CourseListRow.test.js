@@ -19,8 +19,10 @@ describe("Test the Table file", () => {
         expect(wrapper.find('tr').childAt(1).html()).toEqual('<th style="background-color:#deb5b545">test</th>')
     })
     test("Component renders two td", () => {
-        const wrapper = shallow(<CourseListRow textFirstCell="test" />)
+        const wrapper = shallow(<CourseListRow textFirstCell="test" textSecondCell="test" />)
 
-        expect(wrapper.find('td')).toHaveLength(2)
+        expect(wrapper.find('tr').children()).toHaveLength(2)
+        expect(wrapper.find('tr').childAt(0).html()).toEqual('<td>test</td>')
+        expect(wrapper.find('tr').childAt(1).html()).toEqual('<td>test</td>')
     })
 })

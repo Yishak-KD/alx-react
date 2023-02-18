@@ -17,7 +17,7 @@ class Login extends Component {
                         <button>OK</button>
                     </form>
                 </div>
-                <hr className={css(styles.hr)} />
+                <hr className={css(styles.hrline)} />
             </React.Fragment>
         )
     }
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
         padding: '40px',
         fontWeight: '500',
     },
-    hr: {
+    hrline: {
         borderTop: '3.5px solid rgb(230, 62, 62)',
     },
     '@media (max-width: 900px)': {

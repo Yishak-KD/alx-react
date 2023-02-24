@@ -23,12 +23,13 @@ class App extends React.Component {
   ];
 
   render() {
+    const { isLoggedIn } = this.props;
     return (
       <>
-        <Notifications listNotifications={listNotifications} />
+        <Notifications listNotifications={this.listNotifications} />
         <div className="App">
           <Header />
-          {isLoggedIn ? <CourseList listCourses={listCourses} /> : <Login />}
+          {isLoggedIn ? <CourseList listCourses={this.listCourses} /> : <Login />}
           <Footer />
         </div>
       </>

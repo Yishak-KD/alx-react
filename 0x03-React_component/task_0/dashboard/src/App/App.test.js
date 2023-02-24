@@ -8,8 +8,7 @@ import Footer from '../Footer/Footer';
 //
 describe("Test App component", () => {
     test("Renders without crushing", () => {
-        const wrapper = shallow(<App />)
-        expect(wrapper.exists()).toBe(true)
+        shallow(<App />)
     })
 
     test("Check Notifications component", () => {

@@ -1,18 +1,34 @@
 import holberton from '../Holberton.jpg';
 import React from 'react';
 import { StyleSheet, css } from 'aphrodite';
+import { AppContext } from '../App/AppContext';
 
-export default function Header() {
-    return (
-        <>
-            <div className={css(styles["App-header"])}>
-                <img src={holberton} className={css(styles['App-logo'])} alt="logo" />
-                <h1 className={css(styles['App-h1'])}>School dashboard</h1>
-                <hr className={css(styles.hr)} />
-            </div>
-        </>
-    )
+export default class Header extends React.Component {
+    // static contextType = AppContext
+    render() {
+        const data = this.context
+        const email = data.currentUser.email
+        const displayText = () => {
+            if (data.currentUser.isLoggedIn) {
+                return (
+                    <section id="logoutSection">Welcome {email}
+                        <span className={css(styles.logOut)} onClick={data.logOut}>(logout)</span>
+                    </section>
+                )
+            }
+        }
+        return (
+            <React.Fragment>
+                <div className={css(styles.header)}>
+                    <img className={css(styles.img)} src={holberton} alt="logo" />
+                    <h1 className={css(styles.heading)}>School dashboard</h1>
+                </div>
+                {displayText()}
+            </React.Fragment>
+        )
+    }
 }
+Header.contextType = AppContext
 
 const styles = StyleSheet.create({
     "App-header": {
